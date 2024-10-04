@@ -8,5 +8,6 @@ void display(){
     char** row1 = repeatH(blackandwhite, 4);
     char** row2 = repeatH(whiteandblack, 4);
     char** mergeRow = up(row1, row2);
-    interpreter(mergeRow);
+    char** col = repeatV(mergeRow, 2);
+    interpreter(col);
 }
