@@ -6,5 +6,5 @@ void display(){
     char** whiteandblack = join(whiteSquare, blackSquare);
     char** blackandwhite = reverse(whiteandblack);
     char** row = repeatH(blackandwhite, 4);
-    interpreter(blackandwhite);
+    interpreter(row);
 }
