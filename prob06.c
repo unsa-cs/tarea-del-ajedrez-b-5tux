@@ -28,5 +28,7 @@ void display(){
     char** pawnBlackFigures = reverse(rowPawnOnSquares);
     char** blackSideFigures = up(pawnBlackFigures, rowsBlackFigures);
     
-    interpreter(blackSideFigures);
+    char** fullChessBoard = up(halfChessBoard, blackSideFigures);
+
+    interpreter(fullChessBoard);
 }
