@@ -20,5 +20,7 @@ void display(){
 
     char** rowPawn = repeatH(pawn, 8);
     char** rowPawnOnSquares = superImpose(rowPawn, reverseRow);
-    interpreter(rowPawnOnSquares);
+
+    char** whiteSideFigures = up(rowUnionFigures, rowPawnOnSquares); 
+    interpreter(whiteSideFigures);
 }
