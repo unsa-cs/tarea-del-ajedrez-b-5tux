@@ -12,5 +12,6 @@ void display(){
     char** leftSideFigures = join(rookKnight, bishopQueen);
     char** rightSideFigures = join(kingBishop, knightRook);
     char** rowOfFigures = join(leftSideFigures, rightSideFigures);
-    interpreter(rowOfFigures);
+    char** rowUnionFigures = superImpose(rowOfFigures, row);
+    interpreter(rowUnionFigures);
 }
