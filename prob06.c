@@ -6,7 +6,7 @@ void display(){
     char** blackAndWhite = join(blackSquare, whiteSquare);
     char** row = repeatH(blackAndWhite, 4);
     char** reverseRow = reverse(row);
-    char** unionRows = up(row, reverseRow);
+    char** unionRows = repeatV(up(row, reverseRow), 2);
 
     char** rookKnight = join(rook, knight);
     char** bishopQueen = join(bishop, queen);
