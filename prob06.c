@@ -24,6 +24,7 @@ void display(){
 
     char** whiteSideFigures = up(rowUnionFigures, rowPawnOnSquares);
     char** halfChessBoard = up(whiteSideFigures, unionRows);
+    char** rowsBlackFigures = reverse(rowUnionFigures);
 
-    interpreter(halfChessBoard);
+    interpreter(rowsBlackFigures);
 }
