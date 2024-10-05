@@ -13,6 +13,6 @@ void display(){
     char** rightSideFigures = join(kingBishop, knightRook);
     char** rowOfFigures = join(leftSideFigures, rightSideFigures);
     char** reverseRowOfFigures = reverse(rowOfFigures);
-    char** rowUnionFigures = superImpose(rowOfFigures, row);
-    interpreter(reverseRowOfFigures);
+    char** rowUnionFigures = superImpose(reverseRowOfFigures, row);
+    interpreter(rowUnionFigures);
 }
