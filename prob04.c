@@ -5,5 +5,6 @@ void display(){
     char** blackSquare = reverse(whiteSquare);
     char** rookSquare = superImpose(rook, blackSquare);
     char** knightSquare = superImpose(knight, blackSquare);
-    interpreter(knightSquare);
+    char** rookAndKnight = join(rook, knight);
+    interpreter(rookAndKnight);
 }
