@@ -5,6 +5,7 @@ void display(){
     char** blackSquare = reverse(whiteSquare);
     char** blackAndWhite = join(blackSquare, whiteSquare);
     char** row = repeatH(blackAndWhite, 4);
+    char** reverseRow = reverse(row);
 
     char** rookKnight = join(rook, knight);
     char** bishopQueen = join(bishop, queen);
@@ -17,6 +18,7 @@ void display(){
     char** rowOfFigures = join(leftSideFigures, rightSideFigures);
     char** rowUnionFigures = superImpose(rowOfFigures, row);
 
-    char** rowPawn = repeatH(pawn, 8); 
-    interpreter(rowPawn);
+    char** rowPawn = repeatH(pawn, 8);
+    char** rowPawnOnSquares = superImpose(rowPawn, reverseRow);
+    interpreter(rowPawnOnSquares);
 }
