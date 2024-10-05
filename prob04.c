@@ -6,5 +6,7 @@ void display(){
     char** rookSquare = superImpose(rook, blackSquare);
     char** knightSquare = superImpose(knight, blackSquare);
     char** rookAndKnight = join(rook, knight);
-    interpreter(rookAndKnight);
+    char** blackAndWhite = join(blackSquare, whiteSquare);
+    char** twoFiguresOnRow = superImpose(rookAndKnight, blackAndWhite);
+    interpreter(twoFiguresOnRow);
 }
