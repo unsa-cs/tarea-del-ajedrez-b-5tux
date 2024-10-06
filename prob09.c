@@ -21,6 +21,7 @@ void display(){
     char** blackPawnOnBlackSquare = reverse(whitePawnOnWhiteSquare);
     char** whiteRookOnBlackSquare = superImpose(rook, blackSquare);
     char** pawnAndRookRow3 = join(whitePawnOnWhiteSquare, whiteRookOnBlackSquare);
+    char** completeRow3 = join(whiteAndBlackRow1, join(pawnAndRookRow3, join(whiteSquare, blackPawnOnBlackSquare)));
 
-    interpreter(pawnAndRookRow3);
+    interpreter(completeRow3);
 }
