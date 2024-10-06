@@ -34,7 +34,7 @@ void display(){
 
     char** row8Complete = join(join(blackAndWhite, queenRow4), blackAndWhite);
 
-    char** twoRows = up(row1Complete, row2Complete); 
+    char** chessBoard = up(up(up(up(up(up(up(row1Complete, row2Complete), row3Complete), row4Complete), row5Complete), row6Complete), row7Complete), row8Complete); 
 
-    interpreter(twoRows);
+    interpreter(chessBoard);
 }
