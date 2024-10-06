@@ -17,5 +17,10 @@ void display(){
     char** blackRookRow2 = repeatH(join(blackRookOnBlackSquare, whiteSquare), 2);
     char** completeRow2 = join(blackAndWhite, join(blackRookRow2, blackAndWhite));
 
-    interpreter(completeRow2);
+    char** whitePawnOnWhiteSquare = superImpose(pawn, whiteSquare);
+    char** blackPawnOnBlackSquare = reverse(whitePawnOnWhiteSquare);
+    char** whiteRookOnBlackSquare = superImpose(rook, blackSquare);
+    char** pawnAndRookRow3 = join(whitePawnOnWhiteSquare, whiteRookOnBlackSquare);
+
+    interpreter(pawnAndRookRow3);
 }
