@@ -23,6 +23,9 @@ void display(){
 
     char** queenRow4 = join(join(blackSquare, queenOnWhiteSquare), blackAndWhite);
     char** row4Complete = join(blackAndWhiteRow2, queenRow4);
+    
+    char** whiteAndBlackRow5 = repeatH(whiteAndBlack, 2);
+    char** row5Complete = join(whiteAndBlack, join(queenRow1, whiteAndBlackRow5));
 
-    interpreter(row4Complete);
+    interpreter(row5Complete);
 }
