@@ -7,6 +7,9 @@ void display(){
     char** knight270 = rotateR(knight180);
 
     char** upperKnights = join(knight, knight90);
+    char** lowerKnights = join(knight180, knight270);
+    
+    char** fourKnights = up(upperKnights, lowerKnights);
 
-    interpreter(upperKnights);
+    interpreter(fourKnights);
 }
