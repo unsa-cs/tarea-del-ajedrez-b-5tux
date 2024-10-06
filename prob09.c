@@ -23,5 +23,7 @@ void display(){
     char** pawnAndRookRow3 = join(whitePawnOnWhiteSquare, whiteRookOnBlackSquare);
     char** completeRow3 = join(whiteAndBlackRow1, join(pawnAndRookRow3, join(whiteSquare, blackPawnOnBlackSquare)));
 
-    interpreter(completeRow3);
+    char** blackPawnRow4 = repeatH(join(blackPawnOnBlackSquare, whiteSquare), 2);
+
+    interpreter(blackPawnRow4);
 }
