@@ -27,5 +27,8 @@ void display(){
     char** whiteAndBlackRow5 = repeatH(whiteAndBlack, 2);
     char** row5Complete = join(whiteAndBlack, join(queenRow1, whiteAndBlackRow5));
 
-    interpreter(row5Complete);
+    char** blackAndWhiteRow6 = reverse(whiteAndBlackRow1);
+    char** row6Complete = join(blackAndWhiteRow6, queenRow2);
+
+    interpreter(row6Complete);
 }
