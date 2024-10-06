@@ -26,5 +26,12 @@ void display(){
     char** blackPawnRow4 = repeatH(join(blackPawnOnBlackSquare, whiteSquare), 2);
     char** completeRow4 = join(blackPawnRow4, reverse(whiteAndBlackRow1));
 
-    interpreter(completeRow4);
+    char** whiteQueenOnBlackSquare = reverse(blackQueenOnWhiteSquare);
+    char** whiteBishopOnWhiteSquare = superImpose(bishop, whiteSquare);
+    char** whitePawnOnBlackSquare = superImpose(pawn, blackSquare);
+    char** pawnRow5 = join(whitePawnOnWhiteSquare, blackSquare);
+    char** bishopPawnRow5 = join(whiteBishopOnWhiteSquare, blackPawnOnBlackSquare);
+    char** halfRow5 = join(pawnRow5, bishopPawnRow5);
+
+    interpreter(halfRow5);
 }
