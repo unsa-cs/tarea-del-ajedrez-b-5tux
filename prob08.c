@@ -32,5 +32,7 @@ void display(){
 
     char** row7Complete = join(queenRow3, whiteAndBlackRow1);
 
-    interpreter(row7Complete);
+    char** row8Complete = join(join(blackAndWhite, queenRow4), blackAndWhite);
+
+    interpreter(row8Complete);
 }
