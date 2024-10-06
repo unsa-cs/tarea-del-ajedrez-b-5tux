@@ -10,7 +10,9 @@ void display(){
     char** whiteAndBlack = join(whiteSquare, blackSquare);
     char** blackAndWhite = reverse(whiteAndBlack);
 
+    char** whiteAndBlackRow1 = repeatH(whiteAndBlack, 3);
     char** queenRow1 = join(queenOnWhiteSquare, blackSquare);
+    char** row1Complete = join(queenRow1, whiteAndBlackRow1);
 
-    interpreter(queenRow1);
+    interpreter(row1Complete);
 }
