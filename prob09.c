@@ -15,6 +15,7 @@ void display(){
 
     char** blackRookOnBlackSquare = superImpose(reverse(rook), blackSquare);
     char** blackRookRow2 = repeatH(join(blackRookOnBlackSquare, whiteSquare), 2);
+    char** completeRow2 = join(blackAndWhite, join(blackRookRow2, blackAndWhite));
 
-    interpreter(blackRookRow2);
+    interpreter(completeRow2);
 }
