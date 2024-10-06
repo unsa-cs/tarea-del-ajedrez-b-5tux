@@ -21,5 +21,8 @@ void display(){
     char** queenRow3 = join(whiteSquare, queenOnBlackSquare);
     char** row3Complete = join(whiteAndBlackRow1, queenRow3);
 
-    interpreter(row3Complete);
+    char** queenRow4 = join(join(blackSquare, queenOnWhiteSquare), blackAndWhite);
+    char** row4Complete = join(blackAndWhiteRow2, queenRow4);
+
+    interpreter(row4Complete);
 }
