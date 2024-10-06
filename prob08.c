@@ -18,5 +18,8 @@ void display(){
     char** queenRow2 = join(queenOnBlackSquare, whiteSquare);
     char** row2Complete = join(blackAndWhiteRow2, join(queenRow2, blackAndWhite));
 
-    interpreter(row2Complete);
+    char** queenRow3 = join(whiteSquare, queenOnBlackSquare);
+    char** row3Complete = join(whiteAndBlackRow1, queenRow3);
+
+    interpreter(row3Complete);
 }
